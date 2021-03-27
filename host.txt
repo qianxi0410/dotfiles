@@ -1,6 +1,6 @@
 # github begin
 # update 2021/03/27
-140.82.112.3 github.com
+13.250.177.223 github.com
 140.82.112.10 nodeload.github.com
 140.82.114.6 api.github.com
 13.229.189.0 codeload.github.com
