@@ -1,8 +1,7 @@
 {
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Horizon",
     "workbench.iconTheme": "material-icon-theme",
     "editor.cursorBlinking": "expand",
-    "editor.cursorSmoothCaretAnimation": true,
     "editor.fontSize": 18,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
@@ -12,9 +11,13 @@
         "centos8": "linux"
     },
     "files.associations": {
-        "*.csv": "csv"
+        "*.csv": "csv",
+        "*.md": "markdown"
     },
     "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[html]": {
@@ -24,6 +27,9 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "terminal.integrated.shell.windows": "E:\\Git\\bin\\bash.exe",
@@ -40,7 +46,7 @@
         "javascript",
         "html",
         "javascriptreact",
-        {"language":"vue","autoFix": true}
+        { "language": "vue", "autoFix": true }
     ],
     "better-comments.tags": [
         {
@@ -99,23 +105,18 @@
     "prettier.bracketSpacing": true,
     "prettier.endOfLine": "auto",
     "prettier.htmlWhitespaceSensitivity": "ignore",
-    "prettier.ignorePath": ".prettierignore", 
+    "prettier.ignorePath": ".prettierignore",
     "prettier.jsxBracketSameLine": false,
     "prettier.jsxSingleQuote": false,
     "prettier.requireConfig": false,
     "prettier.trailingComma": "es5",
     "prettier.packageManager": "yarn",
-    "bracket-pair-colorizer-2.colors": [
-        "Gold",
-        "Orchid",
-        "LightSkyBlue",
-        "Pink",
-    ],
+    "bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue", "Pink"],
     "vetur.format.defaultFormatter.html": "js-beautify-html",
     "vetur.format.defaultFormatter.js": "prettier",
     "vetur.format.defaultFormatterOptions": {
         "prettier": {
-            "singleQuote": true,
+            "singleQuote": true
         },
         "js-beautify-html": {
             "wrap_line_length": 300,
@@ -150,8 +151,22 @@
     "files.exclude": {
         "**/.idea": true
     },
-    "cSpell.enableFiletypes": [
-        "!scala",
-        "vue"
+    "cSpell.enableFiletypes": ["!scala", "vue"],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
     ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "markdown-preview-enhanced.previewTheme": "vue.css",
+    "cSpell.userWords": ["echarts", "eqeqeq", "qianxi", "stylesheet", "vite", "vitejs", "vuex"],
+    "editor.cursorSmoothCaretAnimation": true,
+    "eslint.packageManager": "yarn",
+    "editor.renderWhitespace": "none",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "breadcrumbs.enabled": false
 }
