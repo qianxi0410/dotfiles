@@ -1,6 +1,6 @@
-# 😈settings
+# 😈dotfiles
 
-Some setting files used in development
+Some dot files used in development
 
 > settings.json
 
