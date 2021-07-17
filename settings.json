@@ -2,14 +2,10 @@
     "workbench.colorTheme": "Horizon",
     "workbench.iconTheme": "material-icon-theme",
     "editor.cursorBlinking": "expand",
-    "editor.fontSize": 18,
+    "editor.fontSize": 20,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "workbench.startupEditor": "newUntitledFile",
-    "remote.SSH.remotePlatform": {
-        "47.111.224.46": "linux",
-        "centos8": "linux"
-    },
     "files.associations": {
         "*.csv": "csv",
         "*.md": "markdown"
@@ -32,7 +28,9 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "terminal.integrated.shell.windows": "E:\\Git\\bin\\bash.exe",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "terminal.integrated.cursorStyle": "line",
     "editor.formatOnSave": true,
     "eslint.codeAction.showDocumentation": {
@@ -42,59 +40,7 @@
         "source.fixAll.eslint": true
     },
     "eslint.format.enable": true,
-    "eslint.validate": [
-        "javascript",
-        "html",
-        "javascriptreact",
-        { "language": "vue", "autoFix": true }
-    ],
-    "better-comments.tags": [
-        {
-            "tag": "!",
-            "color": "#FF2D00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "?",
-            "color": "#3498DB",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "//",
-            "color": "#474747",
-            "strikethrough": true,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "todo",
-            "color": "#FF8C00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "*",
-            "color": "#98C379",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        }
-    ],
+    "eslint.validate": ["javascript", "html", "javascriptreact"],
     "prettier.printWidth": 100,
     "prettier.tabWidth": 4,
     "prettier.useTabs": false,
@@ -110,63 +56,25 @@
     "prettier.jsxSingleQuote": false,
     "prettier.requireConfig": false,
     "prettier.trailingComma": "es5",
-    "prettier.packageManager": "yarn",
     "bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue", "Pink"],
-    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.html": "prettier",
     "vetur.format.defaultFormatter.js": "prettier",
-    "vetur.format.defaultFormatterOptions": {
-        "prettier": {
-            "singleQuote": true
-        },
-        "js-beautify-html": {
-            "wrap_line_length": 300,
-            "wrap_attributes": "auto",
-            "end_with_newline": true
-        }
-    },
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.defaultDateFormat": null,
     "gitlens.defaultDateShortFormat": null,
-    "auto-close-tag.activationOnLanguage": [
-        "xml",
-        "php",
-        "blade",
-        "ejs",
-        "jinja",
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "plaintext",
-        "markdown",
-        "vue",
-        "liquid",
-        "erb",
-        "lang-cfml",
-        "cfml",
-        "HTML (EEx)",
-        "HTML (Eex)",
-        "plist"
-    ],
     "files.exclude": {
         "**/.idea": true
     },
-    "cSpell.enableFiletypes": ["!scala", "vue"],
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "markdown-preview-enhanced.previewTheme": "vue.css",
-    "cSpell.userWords": ["echarts", "eqeqeq", "qianxi", "stylesheet", "vite", "vitejs", "vuex"],
     "editor.cursorSmoothCaretAnimation": true,
     "eslint.packageManager": "yarn",
     "editor.renderWhitespace": "none",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    "terminal.integrated.profiles.windows": {
+        "GitBash": {
+            "path": ["E:\\Git\\bin\\bash.exe"],
+            "icon": "terminal-bash"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "GitBash"
 }
