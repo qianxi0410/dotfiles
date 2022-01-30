@@ -1,3 +1,3 @@
 ### .config
 
-some dot files used by myself
+some dotfiles used by myself
