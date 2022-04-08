@@ -7,6 +7,7 @@ antfu.icons-carbon
 antfu.theme-vitesse
 antfu.unocss
 antfu.vite
+bradlc.vscode-tailwindcss
 bungcip.better-toml
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -24,12 +25,14 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 GitHub.copilot
 golang.go-nightly
+GraphQL.vscode-graphql
 Gruntfuggly.todo-tree
 hollowtree.vue-snippets
 IgorSbitnev.error-gutters
 jcbuisson.vue
 jeff-hykin.better-dockerfile-syntax
 johnsoncodehk.volar
+lokalise.i18n-ally
 matklad.rust-analyzer
 mgmcdermott.vscode-language-babel
 mhutchie.git-graph
@@ -47,7 +50,7 @@ serayuzgur.crates
 shd101wyy.markdown-preview-enhanced
 skyran.js-jsx-snippets
 steoates.autoimport
-TabNine.tabnine-vscode
+syler.sass-indented
 tomoki1207.pdf
 ultram4rine.vscode-choosealicense
 usernamehw.errorlens
@@ -57,6 +60,7 @@ vscodevim.vim
 waderyan.gitblame
 WakaTime.vscode-wakatime
 wayou.vscode-todo-highlight
+william-voyek.vscode-nginx
 Wscats.vue
 xabikos.JavaScriptSnippets
 yzhang.markdown-all-in-one
