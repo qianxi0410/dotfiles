@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="obraun"
-plugins=(git node docker kubectl docker-compose zoxide rust golang extract per-directory-history command-not-found colored-man-pages sudo  zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git node docker kubectl docker-compose zoxide rust golang extract per-directory-history command-not-found colored-man-pages thefuck zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
