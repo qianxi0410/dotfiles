@@ -64,7 +64,7 @@ handle_extension() {
             7z l -p -- "${FILE_PATH}" && exit 5
             exit 1;;
 
-		# Markdown
+        ## markdown
         md)
             # highlight --syntax=markdown --out-format=ansi "${FILE_PATH}" && exit 5
             glow -s dark "${FILE_PATH}" && exit 5
@@ -139,11 +139,9 @@ handle_image() {
     local mimetype="${1}"
     case "${mimetype}" in
         ## SVG
-        image/svg+xml|image/svg)
-            rsvg-convert --keep-aspect-ratio --width "${DEFAULT_SIZE%x*}" "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}.png" \
-                && mv "${IMAGE_CACHE_PATH}.png" "${IMAGE_CACHE_PATH}" \
-                && exit 6
-            exit 1;;
+        # image/svg+xml|image/svg)
+        #     convert -- "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
+        #     exit 1;;
 
         ## DjVu
         # image/vnd.djvu)
@@ -358,7 +356,7 @@ handle_mime() {
             mediainfo "${FILE_PATH}" && exit 5
             exiftool "${FILE_PATH}" && exit 5
             exit 1;;
-
+            
         ## ELF files (executables and shared objects)
         application/x-executable | application/x-pie-executable | application/x-sharedlib)
             readelf -WCa "${FILE_PATH}" && exit 5
