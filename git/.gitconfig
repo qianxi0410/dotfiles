@@ -1,0 +1,23 @@
+[user]
+	name = qianxi0410
+	email = 894871277@qq.com
+[credential]
+	helper = store
+
+[http]
+    proxy = "http://127.0.0.1:7890"
+[https]
+    proxys = "https://127.0.0.1:7890"
+[core]
+	autocrlf = input
+	editor = nvim
+[diff]
+	external = difft
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[packer]
+	difftool = true
+[alias]
+	dft = difftool
