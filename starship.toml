@@ -3,32 +3,20 @@ success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
 vicmd_symbol = "[<](bold green)"
 
-[conda]
-symbol = " "
-
 [directory]
 read_only = "🔒"
 
 [docker_context]
-symbol = " "
+symbol = "🐳"
 
 [git_branch]
 symbol = "🌱 "
 
-[golang]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
 [java]
-symbol = " "
-
-[memory_usage]
-symbol = " "
+symbol = "☕"
 
 [nodejs]
-symbol = " "
+symbol = "🍀"
 
 [git_commit]
 commit_hash_length = 4
