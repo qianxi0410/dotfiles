@@ -1,5 +1,5 @@
 alias ra="ranger"
-alias s="neofetch"
+alias s="fastfetch"
 alias lg="lazygit"
 alias ld="lazydocker"
 alias v="nvim"
