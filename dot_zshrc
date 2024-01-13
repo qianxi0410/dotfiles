@@ -1,0 +1,112 @@
+alias ra="ranger"
+alias s="neofetch"
+alias lg="lazygit"
+alias ld="lazydocker"
+alias v="nvim"
+alias t="tldr"
+alias ls="exa --icons --git --group"
+alias top="btop"
+alias df="duf"
+alias du="ncdu"
+alias cat="bat"
+alias ping="gping"
+alias git="hub"
+alias f="fuck"
+alias sv="sudoedit"
+alias k="kubectl"
+
+eval "$(atuin init zsh)"
+eval "$(github-copilot-cli alias -- "$0")"
+eval $(thefuck --alias)
+
+# Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+# plugins from zsh-users
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-history-substring-search
+zinit light conda-incubator/conda-zsh-completion
+
+# plugins from ohmyzsh
+zinit for \
+    OMZP::zoxide \
+    OMZP::sudo \
+    OMZP::cp \
+    OMZP::command-not-found \
+    OMZP::extract \
+    OMZP::encode64 \
+    OMZP::colored-man-pages \
+    OMZP::dotenv \
+    OMZP::tmux \
+    OMZP::gitignore \
+    OMZP::web-search
+
+# some snippets from ohmyzsh's lib
+zinit snippet OMZL::history.zsh
+zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::functions.zsh
+
+# plugins from github
+zinit light MichaelAquilina/zsh-you-should-use
+zinit light Aloxaf/fzf-tab
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+# completion
+zinit ice as"completion"
+zinit snippet OMZP::docker/_docker
+
+zinit ice as"completion"
+zinit snippet OMZP::docker-compose/_docker-compose
+
+zinit ice as"completion"
+zinit snippet OMZP::github/_hub
+
+zinit snippet OMZP::gh
+
+# starship themes
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
+autoload -Uz compinit
+compinit
+zinit cdreplay -q
+# End of Zinit's installer chunk
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

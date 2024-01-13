@@ -1,0 +1,47 @@
+[user]
+    name = qianxi0410
+    email = 894871277@qq.com
+    signingkey = D00A59A6ABBC1652
+[credential]
+    helper = store
+[http]
+    proxy = http://127.0.0.1:7890
+	postBuffer = 10M
+[https]
+    proxy = http://127.0.0.1:7891
+    postBuffer = 10M
+[core]
+    autocrlf = input
+    editor = nvim
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff]
+    tool = difftastic
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
+[alias]
+    dft = difftool
+    dlog = "!f() { GIT_EXTERNAL_DIFF=difft git log -p --ext-diff $@; }; f"
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[delta]
+    features = decorations
+[delta "interactive"]
+    keep-plus-minus-markers = false
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
