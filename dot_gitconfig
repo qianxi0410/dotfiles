@@ -8,7 +8,7 @@
     proxy = http://127.0.0.1:7890
 	postBuffer = 10M
 [https]
-    proxy = http://127.0.0.1:7891
+    proxy = http://127.0.0.1:7890
     postBuffer = 10M
 [core]
     autocrlf = input
