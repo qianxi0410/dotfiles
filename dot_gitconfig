@@ -5,10 +5,10 @@
 [credential]
     helper = store
 [http]
-  proxy = http://127.0.0.1:7890
+    proxy = socks5://127.0.0.1:7890
 	postBuffer = 10M
 [https]
-    proxy = http://127.0.0.1:7890
+    proxy = socks5://127.0.0.1:7890
     postBuffer = 10M
 [core]
     autocrlf = input

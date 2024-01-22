@@ -5,6 +5,9 @@
 [manager]
 
 keymap = [
+  # dropping to the shell
+  { on = ["<C-s>"], exec = '''shell "$SHELL" --block --confirm''', desc = "Open shell here" },
+
   { on = ["<Esc>"], exec = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
   { on = ["q"], exec = "quit", desc = "Exit the process" },
   { on = ["Q"], exec = "quit --no-cwd-file", desc = "Exit the process without writing cwd-file" },
