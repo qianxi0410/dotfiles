@@ -33,7 +33,7 @@ function Header:host()
     return ui.Line({})
   end
 
-  return ui.Span(ya.user_name() .. "@" .. ya.host_name()):fg("blue")
+  return ui.Span(ya.user_name() .. "@" .. ya.host_name() .. ":"):fg("blue")
 end
 
 function Header:render(area)
