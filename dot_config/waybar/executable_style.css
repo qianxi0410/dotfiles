@@ -1,0 +1,116 @@
+@define-color bar-bg rgba(0, 0, 0, 0);
+@define-color main-bg #1d2021;
+@define-color main-fg #ebdbb2;
+@define-color main-active #d79921;
+
+* {
+  font-family: "FiraCode Nerd Font";
+  font-weight: bold;
+  font-size: 20px;
+  min-height: 0;
+}
+
+/* gruvbox theme preset */
+window#waybar {
+  background: @bar-bg;
+  color: @main-fg;
+}
+
+#workspaces button {
+  padding: 2px;
+  color: @main-fg;
+  margin-right: 2px;
+}
+
+#workspaces button.active {
+  color: @main-active;
+}
+
+#custom-arch,
+#custom-power_profile,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#custom-updates,
+#workspaces,
+#tray,
+#taskbar,
+#custom-powermenu {
+  background: @main-bg;
+  opacity: 0.9;
+  padding: 0px 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+#tray {
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#workspaces {
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#window {
+  border-radius: 10px;
+}
+
+#waybar.empty #window {
+  background: none;
+  border: none;
+}
+
+#clock {
+  color: @main-fg;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+
+#custom-arch {
+  color: @main-fg;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+  padding: 0px 20px 0px 10px;
+}
+
+#custom-powermenu {
+  color: @main-fg;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 10px;
+  padding: 0px 15px 0px 10px;
+}
+
+#pulseaudio {
+  color: @main-fg;
+}
+
+#pulseaudio.microphone {
+  color: @main-fg;
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 10px;
+}
+
+#battery {
+  color: @main-fg;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 10px;
+}
+
+#custom-updates {
+  color: @main-fg;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 10px;
+}
+
+#taskbar {
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+
+#taskbar.empty {
+  background: none;
+  border: none;
+  opacity: 0;
+}

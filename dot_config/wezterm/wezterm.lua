@@ -36,6 +36,7 @@ config.window_padding = {
 }
 config.enable_scroll_bar = false
 config.enable_tab_bar = false -- i use tmux btw
+-- config.window_background_opacity = 0.9 -- 和hyprland一致
 
 -- config.default_prog = { "tmux" }
 
