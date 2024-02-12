@@ -119,7 +119,7 @@
   "custom/arch": {
     "format": "",
     "on-click": "exec rofi -show drun -theme $HOME/.config/rofi/fullscreen.rasi",
-    "on-click-right": "exec ~/.config/hypr/scripts/random_wallpaper.sh",
+    "on-click-right": "exec python $HOME/.config/hypr/scripts/random_wallpaper.py not-dameon",
     "tooltip": false,
   },
   "custom/powermenu": {
