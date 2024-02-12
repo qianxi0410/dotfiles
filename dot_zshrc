@@ -14,7 +14,8 @@ alias git="hub"
 alias f="fuck"
 alias sv="sudoedit"
 alias k="kubectl"
-alias ch=chezmoi
+alias ch="chezmoi"
+alias rm="trash-put"
 
 eval "$(atuin init zsh)"
 eval "$(github-copilot-cli alias -- "$0")"
