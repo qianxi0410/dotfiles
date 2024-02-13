@@ -27,6 +27,7 @@ extract = [
   { exec = 'unar "%1"', desc = "Extract here", for = "windows" },
 ]
 open = [
+  { exec = 'imv "$1"', desc = "Preview img", for = "unix" },                 # 增加对图片打开的支持
   { exec = 'xdg-open "$@"', desc = "Open", for = "linux" },
   { exec = 'open "$@"', desc = "Open", for = "macos" },
   { exec = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
