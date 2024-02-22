@@ -59,7 +59,7 @@
   "clock": {
     "interval": 60,
     "tooltip": true,
-    "format": "{: %H:%M}",
+    "format": " {:%H:%M}",
     "tooltip-format": "{:%Y-%m-%d}",
   },
   "custom/updates": {
