@@ -16,6 +16,7 @@ alias sv="sudoedit"
 alias k="kubectl"
 alias ch="chezmoi"
 alias rm="trash-put"
+alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime"
 
 eval "$(atuin init zsh)"
 eval "$(github-copilot-cli alias -- "$0")"
