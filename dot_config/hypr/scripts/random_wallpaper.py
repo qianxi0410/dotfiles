@@ -15,7 +15,8 @@ def random_wallpaper():
 
     index = output.rfind("/")
     current_wallpaper = output[index + 1 :].strip()
-    wallpapers.remove(current_wallpaper)
+    if current_wallpaper in wallpapers:
+        wallpapers.remove(current_wallpaper)
     next_wallpaper = random.choice(wallpapers)
 
     subprocess.run(["swww", "img", f"{dir}/{next_wallpaper}", "--transition-type", "any"])
