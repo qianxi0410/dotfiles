@@ -16,9 +16,9 @@ alias sv="sudoedit"
 alias k="kubectl"
 alias ch="chezmoi"
 alias rm="trash-put"
+alias ghcs="gh copilot suggest"
 
 eval "$(atuin init zsh)"
-eval "$(github-copilot-cli alias -- "$0")"
 eval $(thefuck --alias)
 
 # Added by Zinit's installer
