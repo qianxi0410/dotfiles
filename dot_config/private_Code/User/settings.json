@@ -21,10 +21,11 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "explicit",
+    "quickfix.biome": "explicit"
   },
   "workbench.iconTheme": "gruvbox-material-icon-theme",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Vitesse Dark",
   "workbench.colorCustomizations": {
     "[Gruvbox Dark Hard]": {
       "sideBar.border": "#282828",
@@ -56,6 +57,13 @@
   "terminal.external.linuxExec": "zsh",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 20,
+  /* js */
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "always"
+    }
+  },
   /* python */
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
@@ -105,8 +113,6 @@
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
   "clangd.fallbackFlags": ["-std=c++17"],
-  /* python */
-  "python.formatting.provider": "black",
   /* file nesting */
   "fileNestingUpdater.autoUpdateInterval": 10080,
   "explorer.fileNesting.enabled": true,
@@ -200,8 +206,4 @@
     "scminput": false
   },
   "workbench.productIconTheme": "fluent-icons",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "codeium.enableConfig": {
-    "*": true
-  }
 }
