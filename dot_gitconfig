@@ -1,7 +1,7 @@
 [user]
-    name = qianxi0410
-    email = 894871277@qq.com
-    signingkey = D00A59A6ABBC1652
+  name = qianxi0410
+  email = 894871277@qq.com
+  signingkey = D00A59A6ABBC1652
 [merge]
 	conflictStyle = zdiff3
 [rebase]
