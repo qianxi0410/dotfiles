@@ -17,6 +17,7 @@ alias k="kubectl"
 alias ch="chezmoi"
 alias rm="trash-put"
 alias ghcs="gh copilot suggest"
+alias pd="podman"
 
 eval "$(atuin init zsh)"
 eval $(thefuck --alias)
