@@ -18,6 +18,7 @@ alias ch="chezmoi"
 alias rm="trash-put"
 alias ghcs="gh copilot suggest"
 alias pd="podman"
+alias nc="nerdctl"
 
 eval "$(atuin init zsh)"
 eval $(thefuck --alias)
@@ -85,6 +86,8 @@ zinit ice as"completion"
 zinit snippet OMZP::github/_hub
 
 zinit snippet OMZP::gh
+
+zinit snippet OMZP::podman
 
 # starship themes
 zinit ice as"command" from"gh-r" \
