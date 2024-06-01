@@ -77,7 +77,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 
 # completion
 zinit ice as"completion"
-zinit snippet OMZP::docker/_docker
+zinit snippet OMZP::docker/completions/_docker
 
 zinit ice as"completion"
 zinit snippet OMZP::docker-compose/_docker-compose
