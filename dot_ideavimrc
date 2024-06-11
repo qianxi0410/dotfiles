@@ -1,0 +1,34 @@
+set scrolloff=5
+set incsearch
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set clipboard=unnamedplus
+set ideajoin
+set ideaput
+set ideastatusicon=gray
+set surround
+set highlightedyank
+set showmode
+set NERDTree
+set wildmenu
+
+let mapleader = " "
+map Q gq
+map <leader>r :source ~/.ideavimrc<CR>
+map <leader>x :q<CR>
+map <leader>Q :qa<CR>
+map <leader>n :NERDTreeToggle<CR>
+map <leader>h :set hlsearch!<CR> " toggle search highlight
+map <leader>l :set list!<CR> " toggle list
+
+" search
+nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader>fa :action GotoAction<CR>
+nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fs :action GotoSymbol<CR>
+
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
