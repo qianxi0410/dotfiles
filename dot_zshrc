@@ -15,11 +15,7 @@ alias f="fuck"
 alias sv="sudoedit"
 alias k="kubectl"
 alias ch="chezmoi"
-alias rm="trash-put"
 alias ghcs="gh copilot suggest"
-alias pd="podman"
-alias nc="nerdctl"
-alias n="pnpm"
 
 eval "$(atuin init zsh)"
 eval $(thefuck --alias)
@@ -62,8 +58,7 @@ zinit for \
     OMZP::colored-man-pages \
     OMZP::dotenv \
     OMZP::tmux \
-    OMZP::gitignore \
-    OMZP::web-search
+    OMZP::gitignore
 
 # some snippets from ohmyzsh's lib
 zinit snippet OMZL::history.zsh
@@ -87,27 +82,6 @@ zinit ice as"completion"
 zinit snippet OMZP::github/_hub
 
 zinit snippet OMZP::gh
-
-zinit snippet OMZP::podman
-
-###-begin-pnpm-completion-###
-if type compdef &>/dev/null; then
-  _pnpm_completion () {
-    local reply
-    local si=$IFS
-
-    IFS=$'\n' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" SHELL=zsh pnpm completion-server -- "${words[@]}"))
-    IFS=$si
-
-    if [ "$reply" = "__tabtab_complete_files__" ]; then
-      _files
-    else
-      _describe 'values' reply
-    fi
-  }
-  compdef _pnpm_completion pnpm
-fi
-###-end-pnpm-completion-###
 
 # starship themes
 zinit ice as"command" from"gh-r" \
