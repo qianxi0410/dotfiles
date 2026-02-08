@@ -1,0 +1,73 @@
+# Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zi light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+# End of Zinit's installer chunk
+
+# 别名
+alias ch="chezmoi"
+alias ra="yazi"
+alias s="fastfetch"
+alias lg="lazygit"
+alias ld="lazydocker"
+alias v="nvim"
+alias ls="exa --icons --git --group"
+alias cat="bat"
+alias git="hub"
+
+# 环境变量
+export EDITOR="code"
+
+eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
+
+# 插件和补全
+zi ice blockf
+zi light zsh-users/zsh-completions
+
+zi ice lucid wait"0" atload"_zsh_autosuggest_start"
+zi light zsh-users/zsh-autosuggestions
+
+zi ice lucid wait"0" atinit='zpcompinit;zicdreplay'
+zi light zdharma-continuum/fast-syntax-highlighting
+
+zi ice lucid wait"1"
+zi light Aloxaf/fzf-tab
+
+zi wait lucid for \
+    OMZP::zoxide \
+    OMZP::sudo \
+    OMZP::cp \
+    OMZP::command-not-found \
+    OMZP::extract \
+    OMZP::gh \
+    OMZP::encode64 \
+    OMZL::history.zsh \
+    OMZL::completion.zsh \
+    OMZL::directories.zsh \
+    OMZL::functions.zsh
+
+
+zi ice as"completion" wait lucid
+zi snippet OMZP::github/_hub
+
+# 最后的补全
+autoload -Uz compinit
+compinit
+zi cdreplay -q
