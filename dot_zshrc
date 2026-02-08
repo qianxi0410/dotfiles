@@ -32,7 +32,10 @@ alias cat="bat"
 alias git="hub"
 
 # 环境变量
-export EDITOR="code --wait"
+export EDITOR="code"
+
+# Set up Node Version Manager
+source /usr/share/nvm/init-nvm.sh
 
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
